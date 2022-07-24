@@ -1,0 +1,168 @@
+@import "../../src/color.scss";
+@import "../../src/global.scss";
+
+@mixin sidebar-css {
+  width: 80%;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $border-bottom-color;
+  @content;
+}
+
+.sidebar {
+  width: 180px;
+  min-height: 100vh;
+  background-color: $primary-dark;
+  color: $primary-dark-text-color;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .sidebar-top {
+    @include sidebar-css;
+  }
+  .sidebar-center {
+    @include sidebar-css;
+  }
+  .sidebar-profile {
+    @include sidebar-css;
+  }
+  .sidebar-bottom {
+    @include sidebar-css;
+  }
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+/* dont want the border set in above in the bottom class so set to none */
+.sidebar-bottom {
+  border: none;
+  justify-content: center;
+}
+
+.logo {
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.brand {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+
+  .list-item {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+
+    .list-item-icon {
+      width: 30px;
+      font-size: 20px;
+    }
+
+    &:hover {
+      background-color: $primary-dark-active;
+      color: white;
+    }
+  }
+}
+
+.list-item.active {
+  background-color: $primary-dark-active;
+  color: white;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.dark {
+  background-color: $primary-dark;
+}
+
+.night {
+  background-color: $primary-night;
+}
+
+.light {
+  background-color: $primary-light;
+}
+.sidebar.night {
+  background-color: $primary-night;
+  color: $primary-night-text-color;
+}
+
+.list-item.active.night {
+  background-color: $primary-night;
+}
+
+.sidebar.light {
+  background-color: $primary-light;
+  color: $primary-dark;
+}
+
+.list-item.active.light {
+  background-color: #d1d5db;
+  color: $primary-dark;
+}
+
+@include media {
+  .pic {
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+  }
+
+  .profile-container {
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .sidebar {
+    width: 50px;
+  }
+
+  .brand,
+  .list-item-text {
+    display: none;
+  }
+
+  .sidebar-bottom {
+    flex-direction: column;
+  }
+
+  .color-box {
+    margin-bottom: 10px;
+    margin-right: 0px;
+  }
+}
