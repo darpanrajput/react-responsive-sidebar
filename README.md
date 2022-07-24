@@ -1,3 +1,28 @@
+# Demo
+![sidebar!](https://github.com/darpanrajput/react-responsive-sidebar/blob/master/demo/sidebarmenu1gif.gif) <br>
+![sidebar!](https://github.com/darpanrajput/react-responsive-sidebar/blob/master/demo/sidebarmenu2gif.gif)<br>
+# SS
+![sidebar!](https://github.com/darpanrajput/react-responsive-sidebar/blob/master/demo/sidebarmenu1.png) <br>
+![sidebar!](https://github.com/darpanrajput/react-responsive-sidebar/blob/master/demo/sidebarmenu2.png) <br>
+
+
+
+## Features
+**Responsiveness** <br>
+**SASS Usage** <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
